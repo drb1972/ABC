@@ -33,7 +33,7 @@
            INITIALIZE Itercount
        
            DISPLAY "Enter a stream of up to 99 numbers."
-           DISPLAY "Each number must be in the range 1-99.  Enter 0 to stop."
+           DISPLAY "Each number must be in the range 1-99."
            DISPLAY "Enter number :- " WITH NO ADVANCING
            ACCEPT UserInput
            PERFORM GetUserInput UNTIL EndOfUserInput OR MaxCountReached
@@ -47,7 +47,7 @@
        
        GetUserInput.
            ADD UserInput TO RunningTotal
-               ON SIZE ERROR DISPLAY "Error - new total too large for data-item."
+               ON SIZE ERROR DISPLAY "Error - new total too large"
                NOT ON SIZE ERROR ADD 1 TO IterCount END-ADD
            END-ADD
            DISPLAY "Total so far is - " RunningTotal
